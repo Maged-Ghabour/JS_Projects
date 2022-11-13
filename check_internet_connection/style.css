@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    font-family: sans-serif;
+    background-color: #121212;
+
+}
+
+h2{
+    font-size: 2em;
+    color: hsl(0, 52%, 75%);
+}
+ul{
+    padding: 15px;
+}
+li{
+    color: #fff;
+}
+
+button{
+    background-color: #6b6b6b;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 1em;
+
+
+}
+
+.hide{
+    display: none;
+}
+
