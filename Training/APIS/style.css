@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "system-ui";
+    background-color: rgb(95, 95, 158);
+}
+
+.row{
+    display:grid; 
+    grid-template-columns: 40% 60%;
+
+}
+.col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+.posts{
+    background-color: #fff;
+}
+
+.users{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(95, 95, 158);
+}
+.users div {
+    padding: 10px;
+    background-color: #fff;
+    margin: 2px;
+    border-radius: 60px;
+    min-width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+.users div:hover{
+    border:3px solid  orange;
+    cursor: pointer;
+}

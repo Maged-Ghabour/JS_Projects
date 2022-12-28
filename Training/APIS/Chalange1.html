@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chalange One</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="row">
+        <div class="col users" id="users">
+        
+        </div>
+        <div class="col posts" id="posts">
+            Posts
+        </div>
+    </div>
+
+
+    <script>
+        let request = new XMLHttpRequest(); 
+        request.open("GET" , "https://jsonplaceholder.typicode.com/users");
+        request.responseType ="json";
+        request.setRequestHeader("Accept" , "application/json"); 
+        request.setRequestHeader("content-type" , "application/json");
+        request.send(); 
+
+        request.onload = function(){
+            let users = document.getElementById("users");
+
+            for (const user of request.response) {
+                users.innerHTML += `<div>
+                                        <p>${user.name}
+                                        </p> <span>${user.email}</span>
+                                    </div>`
+            }
+        }
+
+    </script>
+</body>
+</html>

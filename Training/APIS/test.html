@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="text-align: center;">API</h2>
+
+    <div class="content" id="content">
+
+    </div>
+
+    <script>
+            let request = new XMLHttpRequest();
+            request.open("GET" , "https://jsonplaceholder.typicode.com/posts");
+            request.responseType = 'json';
+            request.send();
+
+            request.onload = function(){
+            
+                let content = document.getElementById("content"); 
+                let posts   = request.response;
+
+                for(let post of posts){
+                    content.innerHTML += `<p>${post.title}</p>`;
+                }
+
+            }
+    </script>
+</body>
+</html>

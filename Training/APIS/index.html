@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APIS Training</title>
+</head>
+<body>
+    <h2 style="text-align: center;">Taining APIS</h2>
+    <div id="content" >
+
+    </div>
+
+
+<!-- 
+<script>
+    let XHR = new XMLHttpRequest(); 
+    XHR.open("GET" , "https://jsonplaceholder.typicode.com/posts");
+    // XHR.responseType = "json"
+    XHR.send(); 
+
+    XHR.onload = function(){
+        let content = document.getElementById("content");
+        let posts = JSON.parse(XHR.response);
+
+        for(let post of posts) {
+            content.innerHTML += `<h1>${post.title}</h1>`;
+        }
+        
+        
+    }
+</script> -->
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    let XHR = new XMLHttpRequest(); 
+    XHR.open("GET" , "https://jsonplaceholder.typicode.com/posts");
+    XHR.responseType = "json";
+    XHR.send(); 
+
+    XHR.onload = function(){
+        let content = document.getElementById("content");
+        let posts = XHR.response ; 
+        for(post of posts){
+            content.innerHTML += `<h1>${post.title}</h1>`;
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
